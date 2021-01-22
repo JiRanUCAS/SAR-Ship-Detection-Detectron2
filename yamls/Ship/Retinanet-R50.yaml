@@ -1,8 +1,8 @@
 DATASETS:
   TEST:
-  - HRSIDtrain2017
+  - Shiptest
   TRAIN:
-  - HRSIDtest2017
+  - Shiptrainval
 INPUT:
   FORMAT: BGR
   MASK_FORMAT: polygon
@@ -21,7 +21,6 @@ INPUT:
 MODEL:
   RETINANET:
     NUM_CLASSES: 1
-#   WEIGHTS: https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/retinanet_R_50_FPN_3x/190397829/model_final_5bd44e.pkl
   ROI_HEADS:
     BATCH_SIZE_PER_IMAGE: 8
     IN_FEATURES:
@@ -37,7 +36,7 @@ MODEL:
     POSITIVE_FRACTION: 0.25
     PROPOSAL_APPEND_GT: true
     SCORE_THRESH_TEST: 0.05  
-OUTPUT_DIR: output/HRSID/RetinaNet-50
+OUTPUT_DIR: output/Ship/RetinaNet-R50
 SOLVER:
   BASE_LR: 0.0005
   IMS_PER_BATCH: 8
