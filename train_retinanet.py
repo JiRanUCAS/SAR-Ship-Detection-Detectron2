@@ -37,8 +37,8 @@ def setup(args):
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     cfg.freeze()
-    if os.path.exists(cfg.OUTPUT_DIR):
-        shutil.rmtree(cfg.OUTPUT_DIR)
+#     if os.path.exists(cfg.OUTPUT_DIR):
+#         shutil.rmtree(cfg.OUTPUT_DIR)
     default_setup(cfg, args)
     return cfg
 
