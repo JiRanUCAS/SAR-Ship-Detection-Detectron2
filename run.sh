@@ -1,4 +1,14 @@
 ############################## HRSID ###################################
+# python train_fasterrcnn.py \
+#   --config-file yamls/HRSID/Faster-RCNN-R50.yaml  \
+#   --num-gpus 2 \
+#   --dist-url "tcp://127.0.0.1:50001"  
+
+# python train_retinanet.py \
+#   --config-file yamls/HRSID/Faster-RCNN-R18.yaml  \
+#   --num-gpus 2 \
+#   --dist-url "tcp://127.0.0.1:50001"
+  
 # python train_cascade_mask_rcnn.py \
 #   --config-file yamls/HRSID/Cascade-MaskRCNN-R50.yaml  \
 #   --num-gpus 2 \
@@ -6,7 +16,7 @@
   
 python train_mask_rcnn.py \
   --config-file yamls/HRSID/MaskRCNN-R50.yaml  \
-  --num-gpus 2 \
+  --num-gpus 1 \
   --dist-url "tcp://127.0.0.1:50001" 
   
 # python train_retinanet.py \
@@ -19,16 +29,8 @@ python train_mask_rcnn.py \
 #   --num-gpus 2 \
 #   --dist-url "tcp://127.0.0.1:50001"
 
-
-# python train_retinanet.py \
-#   --config-file yamls/HRSID/Faster-RCNN-R18.yaml  \
-#   --num-gpus 2 \
-#   --dist-url "tcp://127.0.0.1:50001"
   
-# python train_fasterrcnn.py \
-#   --config-file yamls/HRSID/Faster-RCNN-R50.yaml  \
-#   --num-gpus 2 \
-#   --dist-url "tcp://127.0.0.1:50001"  
+
     
 ############################## SSDD ###################################
 # python train_cascade_mask_rcnn.py \
