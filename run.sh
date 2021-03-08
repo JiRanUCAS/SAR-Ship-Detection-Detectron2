@@ -14,9 +14,9 @@
 #   --num-gpus 2 \
 #   --dist-url "tcp://127.0.0.1:50001" 
   
-python train_mask_rcnn.py \
+CUDA_VISIBLE_DEVICES=0,1 python train_mask_rcnn.py \
   --config-file yamls/HRSID/MaskRCNN-R50.yaml  \
-  --num-gpus 1 \
+  --num-gpus 2 \
   --dist-url "tcp://127.0.0.1:50001" 
   
 # python train_retinanet.py \
